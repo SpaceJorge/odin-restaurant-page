@@ -5,7 +5,7 @@ import './style.css';
 //image loading
 //import Icon from './icon.png';
 import bgHome from './images/bg-home.jpg';
-import logo from "./images/logo.jpg"
+import logo from "./images/logo.jpg";
 //module loading
 //import printMe from './print.js';
 import addHome from "./home.js";
@@ -26,10 +26,7 @@ function component() {
  
 document.body.appendChild(component());
 */
-console.log("The Maestruli sends his regards.")
+console.log("The Maestruli sends his regards.");
 
 //addHome
-
-
-
-//document.body.appendChild(addHome);
+document.body.appendChild(addHome());

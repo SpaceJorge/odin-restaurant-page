@@ -3,8 +3,7 @@ export default function printMe() {
     console.log('I get called from print.js!');
 }
 */
-function addHome(){
-      
+export default function addHome(){      
     
     const content = document.createElement("div");
     content.setAttribute("id", "content");
@@ -45,10 +44,9 @@ function addHome(){
                 copyThree.classList.add("copy");
                 info.appendChild(copyThree);
 
-    return content
+    //return content
 };
 
-export default addHome();
 
 /*
 Design Reminder
