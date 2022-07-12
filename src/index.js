@@ -29,4 +29,7 @@ document.body.appendChild(component());
 console.log("The Maestruli sends his regards.")
 
 //addHome
-document.body.appendChild(addHome);
+
+
+
+//document.body.appendChild(addHome);

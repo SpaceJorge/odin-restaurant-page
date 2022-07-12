@@ -23,27 +23,28 @@ function addHome(){
                 title.appendChild(hOne);
 
                 const hThree = document.createElement("h3");
-                hThree.textContent = "Auteür Cuisine";
+                hThree.textContent = "Dance, Rock & Cuisine";
                 title.appendChild(hThree);
             
-            const btns = document.createElement("div");
-            btns.classList.add("btns");
-            home.appendChild(btns);
+            const info = document.createElement("div");
+            info.classList.add("info");
+            home.appendChild(info);
 
-                const reservations = document.createElement("button");
-                reservations.textContent = "Reservations";
-                reservations.classList.add("reservations");
-                btns.appendChild(reservations);
+                const copyOne = document.createElement("button");
+                copyOne.textContent = "A place to bop.";
+                copyOne.classList.add("copy");
+                info.appendChild(copyOne);
 
-                const menu = document.createElement("button");
-                menu.textContent = "Menu";
-                menu.classList.add("menu");
-                btns.appendChild(menu);
+                const copyTwo = document.createElement("button");
+                copyTwo.textContent = "A place to dance.";
+                copyTwo.classList.add("copy");
+                info.appendChild(copyTwo);
 
-                const experience = document.createElement("button");
-                experience.textContent = "Experience";
-                experience.classList.add("experience");
-                btns.appendChild(experience);
+                const copyThree = document.createElement("button");
+                copyThree.textContent = "A place to eat.";
+                copyThree.classList.add("copy");
+                info.appendChild(copyThree);
+
     return content
 };
 
@@ -68,8 +69,8 @@ Design Reminder
                 <h1>Le Bom Borombom</h1>
                 <h3>Auteür Cuisine</h3>
             </div>
-            <div class="btns">
-                <button id="reservations">Reservations</button>
+            <div class="info">
+                <button id="copy">copy</button>
                 <button id="menu">Menu</button>
                 <button id="experience">Experience</button>
             </div>
