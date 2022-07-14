@@ -5,9 +5,9 @@ module.exports = {
   mode: "development",
   entry: {
     index: './src/index.js',
-    home: './src/home.js',
-    menu: './src/menu.js',
-    reservations: './src/reservations.js',
+    //home: './src/home.js',
+    //menu: './src/menu.js',
+    //reservations: './src/reservations.js',
   },
   devtool: "inline-source-map",
   //With devServer installed you can live reload in the browser

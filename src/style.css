@@ -1,6 +1,6 @@
 :root{
     box-sizing: border-box;
-
+    text-align: center;
 }
 
 @font-face {
@@ -27,14 +27,48 @@
 
 #content{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /*align-items: center;
+    justify-content: center;*/
     flex-direction: column;
     background-image: url("images/bg-home.jpg");
     height: 100vh; /* You must set a specified height */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire*/
+}
+
+.header{
+    display:flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+
+.header button{
+    font-family: "neonsign";
+    text-shadow: 0px 0px 5px lightyellow, 
+                0px 1px rgb(248 211 2), 
+                1px 6px 2px blue, 
+                1px 4px rgb(126 0 0), 
+                2px 5px rgb(126 0 0);
+    padding: 1%;
+    margin: 0;
+    border-radius: 0;
+    border-width: 0px;
+    border-style: unset;
+    /*border-color: #f8d302;*/
+    background-color: #7b68ee00;
+    color: white;
+    box-shadow: 2px 2px 16px 4px rgb(0 0 0 / 20%);
+    font-size: x-large;
+    width: max-content;
+}
+#selected{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .home{
     display: flex;
@@ -68,7 +102,7 @@
     1px 4px rgb(126 0 0),
     2px 5px rgb(126 0 0);
     color: white;
-    text-align: end;
+    /*text-align: end;*/
     /*text-shadow: 1px 1px 2px rgb(126, 0, 0), 
                 2px 5px rgb(248, 121, 2), 
                 2px 9px rgb(248, 211, 2),
@@ -86,23 +120,33 @@
     
 }
 
-.info button{
+.info p{
     font-family: "neonsign";
     text-shadow: 0px 0px 5px lightyellow, 
                 0px 1px rgb(248 211 2), 
                 1px 6px 2px blue, 
                 1px 4px rgb(126 0 0), 
                 2px 5px rgb(126 0 0);
-    padding: 13%;
+    color: white;
+}
+
+.info button{
+    font-family: "neonsign";
+    /*text-shadow: 0px 0px 5px lightyellow, 
+                0px 1px rgb(248 211 2), 
+                1px 6px 2px blue, 
+                1px 4px rgb(126 0 0), 
+                2px 5px rgb(126 0 0);*/
+    padding: 5%;
     margin: 8%;
-    border-radius: 38px;
+    border-radius: 50px;
     border-width: 0px;
     border-style: unset;
     /*border-color: #f8d302;*/
-    background-color: #7b68ee00;
-    color: white;
+    background-color: #e1c971c7;
+    color: black;
     box-shadow: 2px 2px 16px 4px rgb(0 0 0 / 20%);
-    font-size: x-larger;
+    font-size: x-large;
     width: max-content;
-
+    font-size: medium;
 }
