@@ -9,7 +9,7 @@ import logo from "./images/logo.jpg";
 //module loading
 //import printMe from './print.js';
 import addHome from "./home";
-
+import addFood from "./food";
 /*
 function component() {
     const element = document.createElement('div');
@@ -73,10 +73,10 @@ content.appendChild(tabs);
     food.textContent = "Cuisine";
     food.classList.add("tab");
     food.addEventListener("click", ()=>{
-        if (tab != "dance"){
+        if (tab != "food"){
             wipeSelectedTab();
-            tab = "dance";
-            addDance();
+            tab = "food";
+            addFood();
         }
     });
     tabs.appendChild(food);

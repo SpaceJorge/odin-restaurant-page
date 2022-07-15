@@ -1,8 +1,33 @@
-/*example code
-export default function printMe() {
-    console.log('I get called from print.js!');
-}
-*/
+import imgRes from './images/bg-reservations.jpg';
+import imgCake from './images/cake.jpg';
+import imgBeef from './images/beef.jpg';
+import imgChicken from './images/chicken.jpg';
+import imgAvocado from './images/avocado.jpg';
+
+let myMenu = [
+    {
+        name:"Chet's Baked Cake",
+        description:"I've never been in love (with cake) before, now all at once is you, is you forever more.",
+        img:imgCake,
+    },
+    {
+        name:"Cowboy Bebop Beef Pork",
+        description:"Yummy",
+        img:imgBeef,
+    },
+    {
+        name:"Avocado Madness",
+        description:"Just one huge unpeeled avocado.",
+        img:imgAvocado,
+    },
+    {
+        name:"Chicken Corea",
+        description:"Groovy and tasty in a way we thought impossible before. Also, kokoroko!",
+        img:imgChicken,
+    },
+];
+
+
 const addFood = () =>{      
     
     const content = document.getElementById("selected");
@@ -11,46 +36,77 @@ const addFood = () =>{
         food.classList.add("food");
         content.appendChild(food);
 
-            const title = document.createElement("div");
-            title.classList.add("title");
-            food.appendChild(title);
+            const reservations = document.createElement("div");
+            reservations.classList.add("reservations");
+            food.appendChild(reservations);
             
-                const hOne = document.createElement("h1");
-                hOne.textContent = "Le Bom Borombom";
-                title.appendChild(hOne);
+                const imgContainer = document.createElement("span");
+                imgContainer.classList.add("img-cont");
+                reservations.appendChild(imgContainer);
 
-                const hThree = document.createElement("h3");
-                hThree.textContent = "Beats and Dishes";
-                title.appendChild(hThree);
+                    const myResImg = new Image();
+                    myResImg.src = imgRes;
+                    myResImg.alt =`Reservations Image`;
+                    myResImg.height= "100";
+                    imgContainer.appendChild(myResImg);
+                    /*
+                    const img = document.createElement("img");
+                    img.src = "images/bg-reservations.jpg";
+                    img.alt =`Reservations Image`;
+                    img.height= "20vh";
+                    imgContainer.appendChild(img);
+                    */
+                const wordsContainer = document.createElement("div");
+                wordsContainer.classList.add("words");
+                reservations.appendChild(wordsContainer);
+
+                    const res = document.createElement("h3");
+                    res.textContent = "Get your dinner reservations";
+                    wordsContainer.appendChild(res);
+
+                    const getRes = document.createElement("button");
+                    getRes.classList.add("title");
+                    getRes.textContent = "Here";
+                    wordsContainer.appendChild(getRes);
             
-            const info = document.createElement("div");
-            info.classList.add("info");
-            food.appendChild(info);
+            const menu = document.createElement("div");
+            menu.classList.add("menu");
+            food.appendChild(menu);
+            
+            myMenu.forEach(dish => {
 
-                const pOne = document.createElement("p");
-                pOne.textContent = "Open 24hs since 1968.";
-                info.appendChild(pOne);
-
-                const pTwo = document.createElement("p");
-                pTwo.textContent = "58 Street, Manhattan, USA";
-                info.appendChild(pTwo);
-
-                const copyOne = document.createElement("button");
-                copyOne.textContent = "Get Dinner Reservations";
-                copyOne.classList.add("copy");
-                info.appendChild(copyOne);
-
-                const copyTwo = document.createElement("button");
-                copyTwo.textContent = "Get Show Tickets";
-                copyTwo.classList.add("copy");
-                info.appendChild(copyTwo);
-
-                const copyThree = document.createElement("button");
-                copyThree.textContent = "Contact Us";
-                copyThree.classList.add("copy");
-                info.appendChild(copyThree);
-
-    //return content
+                const card = document.createElement("div");
+                card.classList.add('card');
+                menu.appendChild(card);
+                
+                    const imgContainer = document.createElement("span");
+                    imgContainer.classList.add("img-cont");
+                    card.appendChild(imgContainer);
+                        
+                        const img = new Image();
+                        
+                        
+                        //const img = document.createElement("img");
+                        img.src = dish.img;
+                        img.alt =`${dish.name} Image`;
+                        img.height= "100" ;
+                        imgContainer.appendChild(img);
+            
+                    const wordsContainer = document.createElement("div");
+                    wordsContainer.classList.add("words");
+                    card.appendChild(wordsContainer);
+            
+                        const name = document.createElement("p");
+                        name.classList.add("name");
+                        name.textContent = dish.name;
+                        wordsContainer.appendChild(name);
+                
+                        const desc = document.createElement("p");
+                        desc.classList.add("description");
+                        desc.textContent = dish.description;
+                        wordsContainer.appendChild(desc);       
+            });  
+    
 };
 
 export default addFood;
