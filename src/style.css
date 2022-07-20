@@ -327,6 +327,107 @@
     border-radius: 16px;
 }
 
+/* Popup Style */
+.popup{
+    position: fixed;
+    align-self: center;
+    margin-top: 7vh;
+    width: 80vw;
+    border-radius: 36px;
+    border-width: 24px;
+    border-style: double;
+    border-color: rgb(255 141 44 / 12%);
+    
+    /*box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);*/
+    /*box-shadow: 0px 0px 0px 2px rgb(255 0 0), 0px 0px 0px 4px blue;*/
+    /*box-shadow: 0px 0px 5px lightyellow, -1px -1px rgb(248 211 2), 4px 5px 2px blue, 6px 7px rgb(126 0 0), 4px 5px rgb(126 0 0);*/
+    box-shadow: 0px 0px 5px lightyellow, -1px -1px rgb(248 2 229), 4px 5px 2px #ff0000, 6px 7px rgb(51 0 255);
+    background-color: rgb(78 33 58);
+    color: black;
+    font-family: "neonsign";
+    
+  }
+  .popup *{
+    text-shadow: 1px 1px 2px rgb(255 239 44 / 70%);
+    color: white;
+    font-size: large;
+  }
+  .popup h3 {
+    text-align: center;
+    font-size: x-large;
+    display: inline;
+  }
+  .popup .block{
+    padding: 1vh;
+  }
+  #cancel{
+    position: fixed;
+    /*right: auto;
+    text-align: end;*/
+    margin-top: 1vh;
+    margin-left: 5%;
+    padding: 2vh;
+    background-color: #00000070;
+    border-style: inset;
+    font-size: larger;
+  }
+  .popup input, .popup select{
+    border-radius: 12px;
+    border-width: 5px;
+    border-style: outset;
+    border-color: white;
+    /* background-color: rgb(255 239 44 / 70%); */
+    color: #11143e;
+    font-weight: bold;
+    width: 20vw;
+    text-shadow: 0px 1px 1px rgb(204 0 255);
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+    font-family: "pacifico";
+  }
+  .popup select, .popup #date{
+    width: fit-content;
+    color: black;
+  }
+  .popup input[type="radio"]{
+    width: fit-content;
+  }
+  .popup label{
+    margin: 0rem 1rem;
+  }
+  .popup .option{
+    background-color: black;
+  }
+  .popup button{
+    padding: 3%;
+    border-radius: 12px;
+    border-width: 4px;
+    border-style: inset;
+    border-color: white;
+    background-color: #7469a791;
+    color: white;
+    /*box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);*/
+    font-size: larger;
+    font-family: "neonsign";
+  }
+
+  /*
+  .popup textarea{
+    min-height: 20vh;
+    min-width: 20vw;
+    border-radius: 12px;
+    border-width: 8px;
+    border-style: dashed;
+    border-color: white;
+    color: black;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(255, 237, 44, 0.308);
+  }
+*/
+
+
 button:hover{
+    background-color: #ffbb003f;
+}
+#cancel:hover{
     background-color: #ffbb003f;
 }
