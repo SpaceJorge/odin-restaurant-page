@@ -41,6 +41,7 @@ const addFood = () =>{
             reservations.classList.add("reservations");
             food.appendChild(reservations);
             
+            /*
                 const imgContainer = document.createElement("span");
                 imgContainer.classList.add("img-cont");
                 reservations.appendChild(imgContainer);
@@ -49,7 +50,7 @@ const addFood = () =>{
                     myResImg.src = imgRes;
                     myResImg.alt =`Reservations Image`;
                     myResImg.height= "100";
-                    imgContainer.appendChild(myResImg);
+                    imgContainer.appendChild(myResImg);*/
                     /*
                     const img = document.createElement("img");
                     img.src = "images/bg-reservations.jpg";

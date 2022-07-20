@@ -10,6 +10,7 @@ import logo from "./images/logo.jpg";
 //import printMe from './print.js';
 import addHome from "./home";
 import addFood from "./food";
+import addDance from "./dance";
 /*
 function component() {
     const element = document.createElement('div');
