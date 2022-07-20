@@ -1,8 +1,5 @@
-/*example code
-export default function printMe() {
-    console.log('I get called from print.js!');
-}
-*/
+import addPopupReservation from "./popup";
+
 const addHome = () =>{      
     
     const content = document.getElementById("selected");
@@ -38,6 +35,9 @@ const addHome = () =>{
                 const copyOne = document.createElement("button");
                 copyOne.textContent = "Get Dinner Reservations";
                 copyOne.classList.add("copy");
+                copyOne.addEventListener("click", ()=>{
+                    addPopupReservation();
+                });
                 info.appendChild(copyOne);
 
                 const copyTwo = document.createElement("button");
