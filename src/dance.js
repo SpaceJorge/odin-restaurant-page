@@ -1,30 +1,37 @@
 import imgRes from './images/bg-reservations.jpg';
-import imgCake from './images/cake.jpg';
-import imgBeef from './images/beef.jpg';
-import imgChicken from './images/chicken.jpg';
-import imgAvocado from './images/avocado.jpg';
-
-let myCards = [
+import imgDance from './images/dance.jpg';
+//Photo by <a href="https://unsplash.com/@ardianlumi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ardian Lumi</a> on <a href="https://unsplash.com/s/photos/jazz-dance?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+import imgEmpty from './images/band-empty.jpg';
+//Photo by <a href="https://unsplash.com/@john_matychuk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">John Matychuk</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+import imgPast from './images/band-past.jpg';
+//Photo by <a href="https://unsplash.com/@honeypoppet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sandie Clarke</a> on <a href="https://unsplash.com/s/photos/jazz-band?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+import imgStreet from './images/band-street.jpg';
+//Photo by <a href="https://unsplash.com/@robsonhmorgan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Robson Hatsukami Morgan</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+import addPopupReservation from "./popup";
+let myEvents = [
     {
-        name:"Jorgelina's Trombone Quartet",
-        /*date:"Sunday's 8pm"*/
-        description:"Crowd favourite latin-jazz space nonesense band will make you feel like flying, you don't wanna miss it!",
-        img:imgCake,
+        name:"Le Bom Borombom's Worst Kept Secret",
+        date:"Saturday's 8pm",
+        description:"A true 50's jazz night out, a mirage from the past to dance your problems away.",
+        img:imgDance,
     },
     {
-        name:"Cowboy Bebop Beef Pork",
-        description:"One, two, three, let's jam! Or eat, i don't care.",
-        img:imgBeef,
+        name:"This Street's Quartet",
+        date:"Sunday's 8pm",
+        description:"Crowd favourite latin-jazz space nonesense band will make you fly, you don't wanna miss it!",
+        img:imgStreet,
     },
     {
-        name:"Avocado Madness",
-        description:"Just one huge unpeeled avocado. Trendy!",
-        img:imgAvocado,
+        name:"This Week's Musical Guest",
+        date:"Friday's 8pm",
+        description:"New band every week, cherry picked by us.",
+        img:imgEmpty,
     },
     {
-        name:"Chicken Corea",
-        description:"Groovy and tasty in a way we thought impossible before. Also, kokoroko!",
-        img:imgChicken,
+        name:"Into the Jazzyverse",
+        date:"Sunday's 9am",
+        description:"Charles Jazzman live podcast show, is live from LBB! With special guests, and the best records.",
+        img:imgPast,
     },
 ];
 
@@ -36,40 +43,9 @@ const addDance = () =>{
         const dance = document.createElement("div");
         dance.classList.add("dance");
         content.appendChild(dance);
-            /*
-            const reservations = document.createElement("div");
-            reservations.classList.add("reservations");
-            dance.appendChild(reservations);
-            
-            
-                const imgContainer = document.createElement("span");
-                imgContainer.classList.add("img-cont");
-                reservations.appendChild(imgContainer);
 
-                    const myResImg = new Image();
-                    myResImg.src = imgRes;
-                    myResImg.alt =`Reservations Image`;
-                    myResImg.height= "100";
-                    imgContainer.appendChild(myResImg);
-                    
-                const wordsContainer = document.createElement("div");
-                wordsContainer.classList.add("words");
-                reservations.appendChild(wordsContainer);
-
-                    const res = document.createElement("h3");
-                    res.textContent = "Get your dinner reservations";
-                    wordsContainer.appendChild(res);
-
-                    const getRes = document.createElement("button");
-                    getRes.classList.add("title");
-                    getRes.textContent = "Here";
-                    getRes.addEventListener("click", ()=>{
-                        addPopupReservation();
-                    });
-                    wordsContainer.appendChild(getRes);
-            */
             const eventContainer = document.createElement("div");
-            eventContainer.classList.add("menu");
+            eventContainer.classList.add("event-cont");
             dance.appendChild(eventContainer);
             
                 const card = document.createElement("div");
@@ -78,27 +54,15 @@ const addDance = () =>{
 
                 const eventTitle = document.createElement("p");
                 eventTitle.classList.add("title");
-                eventTitle.textContent = "This Season's Events";
+                eventTitle.textContent = "The Board";
                 card.appendChild(eventTitle);
 
-                myCards.forEach(dish => {
+                myEvents.forEach(ev => {
 
                 const card = document.createElement("div");
                 card.classList.add('card');
+                card.style.backgroundImage = "url(" + ev.img + ")";
                 eventContainer.appendChild(card);
-                
-                    const imgContainer = document.createElement("span");
-                    imgContainer.classList.add("img-cont");
-                    card.appendChild(imgContainer);
-                        
-                        const img = new Image();
-                        
-                        
-                        //const img = document.createElement("img");
-                        img.src = dish.img;
-                        img.alt =`${dish.name} Image`;
-                        img.height= "100" ;
-                        imgContainer.appendChild(img);
             
                     const wordsContainer = document.createElement("div");
                     wordsContainer.classList.add("words");
@@ -106,13 +70,26 @@ const addDance = () =>{
             
                         const name = document.createElement("p");
                         name.classList.add("name");
-                        name.textContent = dish.name;
+                        name.textContent = ev.name;
                         wordsContainer.appendChild(name);
                 
+                        const date = document.createElement("p");
+                        date.classList.add("date");
+                        date.textContent = ev.date;
+                        wordsContainer.appendChild(date);
+
                         const desc = document.createElement("p");
                         desc.classList.add("description");
-                        desc.textContent = dish.description;
-                        wordsContainer.appendChild(desc);       
+                        desc.textContent = ev.description;
+                        wordsContainer.appendChild(desc);
+                        
+                    const getTicket = document.createElement("button");
+                    getTicket.classList.add("ticket");
+                    getTicket.textContent = "Get Tickets!";
+                    getTicket.addEventListener("click", ()=>{
+                        addPopupReservation();
+                    });
+                    card.appendChild(getTicket);
             });  
     
 };
