@@ -7,9 +7,9 @@ import addPopupReservation from "./popup";
 
 let myMenu = [
     {
-        name:"Chet's Baked Cake",
-        description:"I've never been in love (with cake) before, now all at once it's you, it's you forever more.",
-        img:imgCake,
+        name:"Chicken Corea",
+        description:"Groovy and tasty in a way we thought impossible before. Also, kokoroko!",
+        img:imgChicken,
     },
     {
         name:"Cowboy Bebop Beef Pork",
@@ -17,14 +17,14 @@ let myMenu = [
         img:imgBeef,
     },
     {
+        name:"Chet's Baked Cake",
+        description:"I've never been in love (with cake) before, now all at once it's you, it's you forever more.",
+        img:imgCake,
+    },
+    {
         name:"Avocado Madness",
         description:"Just one huge unpeeled avocado. Trendy!",
         img:imgAvocado,
-    },
-    {
-        name:"Chicken Corea",
-        description:"Groovy and tasty in a way we thought impossible before. Also, kokoroko!",
-        img:imgChicken,
     },
 ];
 

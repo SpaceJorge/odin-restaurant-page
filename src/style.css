@@ -46,7 +46,7 @@
 
 .header{
     display:flex;
-    width: 100vw;
+    /*width: 100vw;*/
     align-items: center;
     justify-content: center;
     margin-bottom: 1vh;
@@ -103,6 +103,7 @@
                 1px 4px rgb(126 0 0),
                 2px 5px rgb(126 0 0);
     color: white;
+    width: max-content;
 }
 .title h3{
     font-family: 'angista';
@@ -114,7 +115,8 @@
     2px 5px rgb(126 0 0),
     -1px -2px 1px red;
     color: white;
-    /*text-align: end;*/
+    text-align: end;
+    margin-top: -2vh;
     /*text-shadow: 1px 1px 2px rgb(126, 0, 0), 
                 2px 5px rgb(248, 121, 2), 
                 2px 9px rgb(248, 211, 2),
@@ -128,7 +130,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    margin-top: 10vh;
     
 }
 
@@ -145,24 +147,36 @@
 }
 
 .info button{
+    /*
     font-family: "neonsign";
-    /*text-shadow: 0px 0px 5px lightyellow, 
-                0px 1px rgb(248 211 2), 
-                1px 6px 2px blue, 
-                1px 4px rgb(126 0 0), 
-                2px 5px rgb(126 0 0);*/
     padding: 5%;
     margin: 8%;
     border-radius: 50px;
     border-width: 0px;
     border-style: unset;
-    /*border-color: #f8d302;*/
     background-color: #e1c971c7;
     color: black;
-    box-shadow: 2px 2px 16px 4px rgb(0 0 0 / 20%);
+        box-shadow: 0px 0px 5px lightyellow, 
+    -1px -1px rgb(233 2 248), 4px 5px 2px black;
     font-size: x-large;
     width: max-content;
     font-size: medium;
+    */
+    font-family: "neonsign";
+    box-shadow: 0px 0px 5px lightyellow, -1px -1px rgb(248 211 2), 4px 5px 2px blue, 6px 7px rgb(126 0 0), 4px 5px rgb(126 0 0);
+    padding: 3%;
+    margin: 1vh;
+    border-radius: 10px;
+    border-width: 0px;
+    border-style: unset;
+    background-color: #091e4c59;
+    color: white;
+    text-shadow:-1px 0px 5px lightyellow, 1px 1px #ff7600, 2px 4px 3px #0014ff;
+    font-size: x-large;
+    width: max-content;
+}
+.info button:first-of-type{
+    box-shadow: 0px 0px 5px lightyellow, -1px -1px rgb(248 211 2), 4px 5px 2px blue, 6px 7px rgb(126 0 0), 4px 5px rgb(126 0 0);
 }
 
 .food{
@@ -170,7 +184,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 70vw;
+    /*width: 70vw;*/
 }
 
 .reservations{
@@ -200,6 +214,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-left: 1vw;
 }
 .img-cont img{
     margin-right: 0.5rem;
@@ -207,7 +222,8 @@
     border-width: 2px;
     border-style: ridge;
     border-color: #f8d30278;
-
+    max-width: 100%;
+    height: 25vh;
 }
 .words{
     display: flex;
@@ -229,7 +245,7 @@
     border-width: 0px;
     border-style: unset;
     /*border-color: #f8d302;*/
-    background-color: #7b68ee00;
+    background-color: #091e4c59;
     color: white;
     text-shadow: 0px 0px 5px lightyellow, 
                 0px 1px rgb(248 211 2), 
@@ -262,6 +278,7 @@
                 2px 5px rgb(126 0 0);*/
     /*font-size: x-large;*/
     margin-bottom: 5vh;
+    width: 50vw;
 }
 
 .food .card {
@@ -284,7 +301,7 @@
 }
 
 .food .card .description{
-    font-size: 1.2rem;
+    font-size: x-large;
     max-width: 20rem;
     font-style: italic;
     font-family: 'angista';
@@ -292,7 +309,7 @@
     color: lightyellow;
 }
 .food .card .name{
-    font-size: x-large;
+    font-size: xx-large;
     max-width: 15rem;
     margin-bottom: -10px;
 }
@@ -422,6 +439,7 @@
                 4px 5px rgb(126 0 0);
     padding:3%;
     margin: 0;
+    width: 50vw;
     border-radius: 10px;
     border-width: 0px;
     border-style: unset;
@@ -471,10 +489,10 @@
 .dance .card .description{
     font-size: 1.2rem;
     max-width: 20rem;
-    font-style: italic;
-    /*font-family: 'angista';*/
+    /*font-style: italic;
+    font-family: 'angista';*/
     text-shadow: 0px 0px 5px lightyellow, 0px 1px rgb(248 211 2), 1px 6px 2px blue, 1px 4px rgb(126 0 0), 2px 5px rgb(126 0 0), -1px -2px 1px red;
-    color: lightyellow;
+    color: #eeff00;
 }
 .dance .card .name{
     font-size: x-large;
@@ -491,8 +509,7 @@
     border-radius: 10px;
     border-width: 0px;
     border-style: unset;
-    /*border-color: #f8d302;*/
-    background-color: #7b68ee00;
+    background-color: #091e4c59;
     color: white;
     text-shadow: 0px 0px 5px lightyellow, 
     0px 1px rgb(142 2 248), 1px 6px 2px blue, 

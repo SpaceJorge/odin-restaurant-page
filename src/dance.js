@@ -28,7 +28,7 @@ let myEvents = [
         img:imgEmpty,
     },
     {
-        name:"Into the Jazzyverse",
+        name:"Into the Jazzyverse - A Live Podcast & Breakfast",
         date:"Sunday's 9am",
         description:"Charles Jazzman live podcast show, is live from LBB! With special guests, and the best records.",
         img:imgPast,

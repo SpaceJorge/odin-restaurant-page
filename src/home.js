@@ -33,7 +33,7 @@ const addHome = () =>{
                 info.appendChild(pTwo);
 
                 const copyOne = document.createElement("button");
-                copyOne.textContent = "Get Dinner Reservations";
+                copyOne.textContent = "Dinner Reservations";
                 copyOne.classList.add("copy");
                 copyOne.addEventListener("click", ()=>{
                     addPopupReservation();
@@ -41,7 +41,7 @@ const addHome = () =>{
                 info.appendChild(copyOne);
 
                 const copyTwo = document.createElement("button");
-                copyTwo.textContent = "Get Show Tickets";
+                copyTwo.textContent = "Show Tickets";
                 copyTwo.classList.add("copy");
                 info.appendChild(copyTwo);
 
